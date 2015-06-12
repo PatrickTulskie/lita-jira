@@ -19,6 +19,15 @@ module Lita
           t('help.identify.syntax') => t('help.identify.desc')
         }
       )
+      
+      route(
+        /^jira\sidentify\s.*#{LINKED_EMAIL_PATTERN}/,
+        :identify,
+        command: true,
+        help: {
+          t('help.identify.syntax') => t('help.identify.desc')
+        }
+      )
 
       route(
         /^jira\sforget$/,
